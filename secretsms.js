@@ -31,7 +31,7 @@ function encodeMessage (text) {
   let encodedMessage = '' // initializes an empty string variable called encodsms to store the encodedsms
 
   for (let i = 0; i < columns; i++) { // outer loop
-    for (let j = i; j < length; j += columns) {   // This inner loop iterates over the rows for each column. It starts at the current column index i and increments by columns in each iteration. This ensures that the characters are extracted column-wise from the text.
+    for (let j = i; j < length; j += columns) { // This inner loop iterates over the rows for each column. It starts at the current column index i and increments by columns in each iteration. This ensures that the characters are extracted column-wise from the text.
       encodedMessage += text[j] // the character at index j in the text is appended to the encodedMessage string.
     }
     encodedMessage += ' ' // After each column is processed, a space character is appended to the encodedMessage string to separate the columns.
