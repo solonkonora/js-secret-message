@@ -30,11 +30,12 @@ button {
   color: #fff;
   border: none;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 #normalized-text,
 #encoded-message,
 #decoded-text {
   font-size: 16px;
-  margin-bottom: 20px;
+  margin-top: 20px ;
 }
