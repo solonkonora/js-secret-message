@@ -5,7 +5,6 @@ const decodedTextDiv = document.getElementById('decoded-text')
 const encodeBtn = document.getElementById('encode-btn')
 
 encodeBtn.addEventListener('click', function () {
-
   // The .trim() method is then called on the value to remove any leading or trailing whitespace.
   const sentence = sentenceInput.value.trim()
 
@@ -14,7 +13,7 @@ encodeBtn.addEventListener('click', function () {
     return
   }
 
-   // this line calls the normalizeText fxt
+  // this line calls the normalizeText fxt
   const normalizedText = normalizeText(sentence)
   const encodedMessage = encodeMessage(normalizedText)
   const decodedText = decodeMessage(encodedMessage)
@@ -40,10 +39,8 @@ function encodeMessage (text) {
 
   // outer loop
   for (let i = 0; i < columns; i++) {
-
     // This inner loop iterates over the rows for each column. It starts at the current column index i and increments by columns in each iteration. This ensures that the characters are extracted column-wise from the text.
     for (let j = i; j < length; j += columns) {
-
       // the character at index j in the text is appended to the encodedMessage string.
       encodedMessage += text[j]
     }
@@ -64,10 +61,8 @@ function decodeMessage (encodedMessage) {
 
   for (let i = 0; i < columns; i++) {
     for (let j = 0; j < encodedWords.length; j++) {
-
       //  Inside the inner loop, it checks if the current column index i is less than the length of the word at index j in the encodedWords array. This ensures that only valid characters are extracted from each word
       if (i < encodedWords[j].length) {
-
         // If the condition is met, it appends the character at index i of the word at index j to the decodedText string.
         decodedText += encodedWords[j][i]
       }
